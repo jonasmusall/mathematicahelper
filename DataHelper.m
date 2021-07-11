@@ -25,5 +25,7 @@ UncertOfAround[expr_Around] := expr["Uncertainty"]
 UncertOfAround[expr_List] := UncertOfAround /@ expr
 UncertOfAround[expr_] := 0
 
+MakeExpression[RowBox[{x_, "\[PlusMinus]", y_}], StandardForm] := MakeExpression[RowBox[{"Around", "[", x, ",", y, "]"}], StandardForm]
+
 End[]
 EndPackage[]
