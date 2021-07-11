@@ -14,7 +14,7 @@ ExportPlot[name_, plot_] :=
         If[!DirectoryQ[dir],
             CreateDirectory[dir]
         ];
-        Export[dir <> "\\" <> name <> ".pdf"]
+        Export[dir <> "\\" <> name <> ".pdf", plot]
     ]
 
 ValueOfAround[expr_Around] := expr["Value"]
