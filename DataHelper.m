@@ -23,8 +23,7 @@ ValueOfAround[expr_] := expr
 
 UncertOfAround[expr_Around] := expr["Uncertainty"]
 UncertOfAround[expr_List] := UncertOfAround /@ expr
-UncertOfAround[expr_?NumberQ] := 0
-UncertOfAround[expr_] := expr
+UncertOfAround[expr_] := 0
 
 End[]
 EndPackage[]
